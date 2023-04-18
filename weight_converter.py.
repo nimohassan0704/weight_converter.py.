@@ -1,0 +1,21 @@
+def kg_to_pounds(weight):
+    """Конвертирование килограммов в фунты"""
+    return weight * 2.20462
+
+def pounds_to_kg(weight):
+    """Конвертирование фунтов в килограммы"""
+    return weight / 2.20462
+
+def main():
+    """Главная функция"""
+    print("Weight Conversion Calculator")
+    print("1. Конвертирование килограммов в фунты")
+    print("2. Конвертирование фунтов в килограммы")
+    choice = int(input("Выберите опцию (1 или 2): "))
+    if choice == 1:
+        weight = float(input("Введите вес в килограммах: "))
+        print("{:.2f} кг = {:.2f} фунтов".format(weight, kg_to_pounds(weight)))
+    elif choice == 2:
+        weight = float(input("Введите вес в фунтах: "))
+        print("{:.2f} фунтов = {:.2f} кг".format(weight, pounds_to_kg(weight)))
+    else:
